@@ -1,7 +1,7 @@
 <div class="mgt2e-chat-message item-box">
     <img class="chat-sticker-item" title="{{item.name}}" src="{{item.img}}" />
-    <h2>
-        {{item.name}}
+    <h2 class="chat-item-link">
+        {{item.link}}
     </h2>
 
     <div class="mgt2e-chat-content">
@@ -10,9 +10,11 @@
                 {{localize 'MGT2.Item.TL'}}: {{{item.system.tl}}}
             </p>
 
+            {{#if item.system.legality}}
             <p>
                 {{localize 'MGT2.Item.Legality'}}: {{{item.system.legality}}}
             </p>
+            {{/if}}
 
             {{#if item.system.weapon}}
             <p>

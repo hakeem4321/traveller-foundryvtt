@@ -1171,6 +1171,12 @@ div.item-side-panel {
   padding-right: 3px;
 }
 
+.name-container {
+  display: grid;
+  grid-template-columns: 12fr 1fr;
+  gap: 10px;
+}
+
 /* Character sheet for creatures */
 
 .creature-sheet .stats {

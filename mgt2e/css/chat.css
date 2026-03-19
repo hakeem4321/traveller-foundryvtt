@@ -130,3 +130,16 @@
   border-radius: 5px;
   padding-left: 5px;
 }
+
+.chat-item-link .content-link{
+  background: transparent;
+  border: none;
+}
+
+.chat-item-link .content-link i{
+  display:none
+}
+
+.chat-item-link .content-link:hover{
+  text-shadow: 0 0 5px wheat;
+}

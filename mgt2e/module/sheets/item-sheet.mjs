@@ -1050,6 +1050,17 @@ export class MgT2ItemSheet extends foundry.appv1.sheets.ItemSheet {
             this.item.update({"system.showEffects": true });
         });
 
+        html.find(".send-item").click(async ev => {
+            this.item.update({"system.showEffects": false });
+            const richDescription = await foundry.applications.ux.TextEditor.enrichHTML(this.item.system.description);
+            const content = {
+                "item": this.item, 
+                "richDescription": richDescription}
+            const html = await renderTemplate("systems/mgt2e/templates/chat/item.html", content);
+            ChatMessage.create({ content: html})
+
+        });
+
         html.find(".hide-effects").click(ev => {
             this.item.update({"system.showEffects": false });
         });
